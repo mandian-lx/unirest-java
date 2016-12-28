@@ -13,7 +13,7 @@ BuildRequires:	maven-local
 BuildRequires:	mvn(org.apache.httpcomponents:httpmime)
 BuildRequires:	mvn(org.apache.httpcomponents:httpclient)
 BuildRequires:	mvn(org.apache.httpcomponents:httpasyncclient)
-BuildRequires:	mvn(org.json:json)
+BuildRequires:	json
 # The followings are required for tests only
 BuildRequires:	mvn(com.fasterxml.jackson.core:jackson-databind)
 BuildRequires:	mvn(commons-io:commons-io)
@@ -24,7 +24,7 @@ Requires:	java-headless
 Requires:	mvn(org.apache.httpcomponents:httpmime)
 Requires:	mvn(org.apache.httpcomponents:httpclient)
 Requires:	mvn(org.apache.httpcomponents:httpasyncclient)
-Requires:	mvn(org.json:json)
+Requires:	json
 
 %description
 jsoup is a Java library for working with real-world HTML. It provides
