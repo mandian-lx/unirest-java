@@ -1,3 +1,5 @@
+%{?_javapackages_macros:%_javapackages_macros}
+
 Summary:	A lightweight HTTP request client libraries for Java
 Name:		unirest-java
 Version:	1.4.9
@@ -8,23 +10,18 @@ URL:		https://unirest.io/java.html
 Source0:	https://github.com/Mashape/%{name}/archive/%{name}-%{version}.tar.gz
 BuildArch:	noarch
 
-BuildRequires:	java-rpmbuild
-BuildRequires:	maven-local
-BuildRequires:	mvn(org.apache.httpcomponents:httpmime)
-BuildRequires:	mvn(org.apache.httpcomponents:httpclient)
-BuildRequires:	mvn(org.apache.httpcomponents:httpasyncclient)
-BuildRequires:	json
+BuildRequires:  maven-local
+BuildRequires:  mvn(org.apache.httpcomponents:httpasyncclient)
+BuildRequires:  mvn(org.apache.httpcomponents:httpclient)
+BuildRequires:  mvn(org.apache.httpcomponents:httpmime)
+BuildRequires:  mvn(org.apache.maven.plugins:maven-assembly-plugin)
+BuildRequires:  mvn(org.apache.maven.plugins:maven-source-plugin)
+BuildRequires:  mvn(org.json:json)
+BuildRequires:  mvn(org.sonatype.oss:oss-parent:pom:)
 # The followings are required for tests only
-BuildRequires:	mvn(com.fasterxml.jackson.core:jackson-databind)
-BuildRequires:	mvn(commons-io:commons-io)
-BuildRequires:	mvn(junit:junit)
-BuildRequires:	x11-server-xvfb
-
-Requires:	java-headless
-Requires:	mvn(org.apache.httpcomponents:httpmime)
-Requires:	mvn(org.apache.httpcomponents:httpclient)
-Requires:	mvn(org.apache.httpcomponents:httpasyncclient)
-Requires:	json
+BuildRequires:  mvn(com.fasterxml.jackson.core:jackson-databind)
+BuildRequires:  mvn(commons-io:commons-io)
+BuildRequires:  mvn(junit:junit)
 
 %description
 jsoup is a Java library for working with real-world HTML. It provides
